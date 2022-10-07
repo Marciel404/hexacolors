@@ -1,33 +1,3 @@
-# hexacolors
-
-A simple library that converts string to hexadecimal understandable by python
-
-## Usage:
-### install with pip
-
-```shell
-pip install hexacolors
-```
-
-### Import on your code:
-
-```python
-import hexacolors
-from hexacolors import hexacolor, stringcolor
-```
-### Run it
-```python
-hexacolors.stringcolor("Blue")
-or
-hexacolors.hexacolor('#711A89')
-```
-
-convert this string for hexadecimal understandable by python
-
-### Using in py-cord
-
-```python
-
 import  discord
 
 from discord.ext import commands
@@ -83,5 +53,3 @@ async def ping(ctx):
     await ctx.send(embed = e)
 
 client.run('Token bot here')
-
-```
