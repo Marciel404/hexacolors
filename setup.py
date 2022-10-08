@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="hexacolors",
-    version="0.3.2",
+    version="0.3.5",
     url = 'https://github.com/Marciel404/hexacolors',
     author="Marciel404",
     description="Convert string color for hexadecimal understandable by python",
