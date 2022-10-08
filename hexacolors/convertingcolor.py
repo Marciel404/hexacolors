@@ -1,4 +1,4 @@
-import  requests
+import requests
 
 from .colors.gray import *
 from .colors.blue import *
@@ -10,8 +10,9 @@ from .colors.green import *
 from .colors.red import *
 from .colors.orange import *
 from .colors.yellow import *
+from .colors.ligthcolors import *
 
-def hexacolor(hexa:str):
+def hexacolor(hexa:str) -> str:
 
     if hexa[0] == '#':
 
@@ -23,7 +24,7 @@ def hexacolor(hexa:str):
 
     return colour
 
-def stringcolor(cor:str):
+def stringcolor(cor:str) -> str:
 
     if cor.lower().replace(' ','') == 'black': 
 
@@ -325,9 +326,9 @@ def stringcolor(cor:str):
 
         color = crimson()
 
-    elif cor.lower().replace(' ','') == 'darkslategray':
+    elif cor.lower().replace(' ','') == 'darkslategreen':
 
-        color = darkslategray()
+        color = darkslategreen()
     
     elif cor.lower().replace(' ','') == 'mediumspringgreen':
 
@@ -468,5 +469,133 @@ def stringcolor(cor:str):
     elif cor.lower().replace(' ','') == 'khaki':
 
         color = khaki()
+    
+    elif cor.lower().replace(' ','') == 'white': 
+
+        color = white()
+
+    elif cor.lower().replace(' ','') == 'aliceblue':
+
+        color = aliceblue()
+    
+    elif cor.lower().replace(' ','') == 'ghostwhite':
+
+        color = ghostwhite()
+    
+    elif cor.lower().replace(' ','') == 'snow':
+
+        color = snow()
+    
+    elif cor.lower().replace(' ','') == 'seashell':
+
+        color = seashell()
+    
+    elif cor.lower().replace(' ','') == 'floralwhite':
+
+        color = floralwhite()
+    
+    elif cor.lower().replace(' ','') == 'whitesmoke':
+
+        color = whitesmoke()
+    
+    elif cor.lower().replace(' ','') == 'beige': 
+
+        color = beige()
+
+    elif cor.lower().replace(' ','') == 'oldlace':
+
+        color = oldlace()
+    
+    elif cor.lower().replace(' ','') == 'ivory':
+
+        color = ivory()
+    
+    elif cor.lower().replace(' ','') == 'linen':
+
+        color = linen()
+    
+    elif cor.lower().replace(' ','') == 'cornsilk':
+
+        color = cornsilk()
+    
+    elif cor.lower().replace(' ','') == 'antiquewhite':
+
+        color = antiquewhite()
+    
+    elif cor.lower().replace(' ','') == 'blanchedalmond':
+
+        color = blanchedalmond()
+    
+    elif cor.lower().replace(' ','') == 'bisque': 
+
+        color = bisque()
+
+    elif cor.lower().replace(' ','') == 'lightyellow':
+
+        color = lightyellow()
+    
+    elif cor.lower().replace(' ','') == 'lemonchiffon':
+
+        color = lemonchiffon()
+    
+    elif cor.lower().replace(' ','') == 'lightgoldenrodyellow':
+
+        color = lightgoldenrodyellow()
+
+    elif cor.lower().replace(' ','') == 'papayawhip':
+
+        color = papayawhip()
+    
+    elif cor.lower().replace(' ','') == 'peachpuff':
+
+        color = peachpuff()
+    
+    elif cor.lower().replace(' ','') == 'moccasin':
+
+        color = moccasin()
+    
+    elif cor.lower().replace(' ','') == 'palegoldenrod': 
+
+        color = palegoldenrod()
+
+    elif cor.lower().replace(' ','') == 'mistyrose':
+
+        color = mistyrose()
+    
+    elif cor.lower().replace(' ','') == 'lavenderblush':
+
+        color = lavenderblush()
+    
+    elif cor.lower().replace(' ','') == 'lavender':
+
+        color = lavender()
+
+    elif cor.lower().replace(' ','') == 'thistle':
+
+        color = thistle()
+    
+    elif cor.lower().replace(' ','') == 'azure':
+
+        color = azure()
+    
+    elif cor.lower().replace(' ','') == 'lightcyan':
+
+        color = lightcyan()
+    
+    elif cor.lower().replace(' ','') == 'powderblue': 
+
+        color = powderblue()
+
+    elif cor.lower().replace(' ','') == 'paleturquoise':
+
+        color = paleturquoise()
+    
+    elif cor.lower().replace(' ','') == 'honeydew':
+
+        color = honeydew()
+    
+    elif cor.lower().replace(' ','') == 'mintcream':
+
+        color = mintcream()
 
     return color

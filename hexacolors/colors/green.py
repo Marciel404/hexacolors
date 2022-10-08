@@ -1,4 +1,4 @@
-def darkslategray():
+def darkslategreen():
 
     cor = 0x2F4F4F
 
