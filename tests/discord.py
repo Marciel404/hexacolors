@@ -1,7 +1,6 @@
-import  discord
+import discord, hexacolors
 
 from discord.ext import commands
-from hexacolors import hexacolor, stringcolor
 
 intents = discord.Intents.all()
 
@@ -32,7 +31,7 @@ async def ping(ctx):
     e = discord.Embed(
     title ='Ping',
     description = 'My ping is {}'.format(int(ping)),
-    color = hexacolor('#2f005c')
+    color = hexacolors.hexacolor('#2f005c')
     )
 
     await ctx.send(embed = e)
@@ -47,7 +46,7 @@ async def ping(ctx):
     e = discord.Embed(
     title ='Ping',
     description = 'My ping is {}'.format(int(ping)),
-    color = stringcolor('Blue')
+    color = hexacolors.stringcolor('Blue')
     )
 
     await ctx.send(embed = e)

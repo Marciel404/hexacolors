@@ -2,6 +2,8 @@
 
 A simple library that converts string to hexadecimal understandable by python
 
+I created this library more to use as pycord integration
+
 ## Usage:
 ### install with pip
 
@@ -13,10 +15,14 @@ pip install hexacolors
 
 ```python
 import hexacolors
+#or
 from hexacolors import hexacolor, stringcolor
 ```
 ### Run it
 ```python
+
+print(hexacolors.listall) #List all colors availables
+
 hexacolors.stringcolor("Blue")
 or
 hexacolors.hexacolor('#711A89')
@@ -28,10 +34,9 @@ convert this string for hexadecimal understandable by python
 
 ```python
 
-import  discord
+import discord, hexacolors
 
 from discord.ext import commands
-from hexacolors import hexacolor, stringcolor
 
 intents = discord.Intents.all()
 
@@ -62,7 +67,7 @@ async def ping(ctx):
     e = discord.Embed(
     title ='Ping',
     description = 'My ping is {}'.format(int(ping)),
-    color = hexacolor('#2f005c')
+    color = hexacolors.hexacolor('#2f005c')
     )
 
     await ctx.send(embed = e)
@@ -77,7 +82,7 @@ async def ping(ctx):
     e = discord.Embed(
     title ='Ping',
     description = 'My ping is {}'.format(int(ping)),
-    color = stringcolor('Blue')
+    color = hexacolors.stringcolor('Blue')
     )
 
     await ctx.send(embed = e)
