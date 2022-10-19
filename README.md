@@ -1,8 +1,11 @@
 # hexacolors
 
 A simple library that converts string to hexadecimal understandable by python
+
 A simple library that converts RGB to hexadecimal understandable by python
-A simple library that converts CMYK to hexadecimal understandable by python
+
+A simple library that converts CMYK to hexadecimal understandable by pytho
+
 A simple library that converts hexadecimal understandable by python
 
 I created this library more to use as pycord integration
