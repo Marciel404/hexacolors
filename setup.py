@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="hexacolors",
-    version="0.3.7",
+    version="0.3.8",
     url = 'https://github.com/Marciel404/hexacolors',
     author="Marciel404",
     description='''

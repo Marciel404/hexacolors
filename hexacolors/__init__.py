@@ -59,7 +59,7 @@ __title__ = "Hexacolors"
 __author__ = "Marciel404"
 __license__ = "MIT"
 __copyright__ = "2022-present Marciel404"
-__version__ = "0.3.7"
+__version__ = "0.3.8"
 
 __path__ = __import__("pkgutil").extend_path(__path__, __name__)
 
