@@ -51,7 +51,7 @@ Using cmyk:
 
     >>> import hexacolors
     >>>
-    >>> hexacolors.rgb('423,522,4,244')
+    >>> hexacolors.cmyk('423,522,4,244')
 
 Using AutoDetect:
 
