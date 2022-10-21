@@ -1,6 +1,6 @@
 import requests
 
-def hexacolor(hexa:str) -> str:
+def hexadecimal(hexa:str) -> str:
 
     if hexa[0] == '#':
 
@@ -23,6 +23,14 @@ def rgb(rgb:str) -> str:
 def cmyk(cmyk:str) -> str:
 
     p = requests.get(f'https://www.thecolorapi.com/id?cmyk={cmyk}')
+
+    colour = int(f"0x{p.json()['hex']['clean']}",16)
+
+    return colour
+
+def hsl(hsl:str) -> str:
+
+    p = requests.get(f'https://www.thecolorapi.com/id?hsl={hsl}')
 
     colour = int(f"0x{p.json()['hex']['clean']}",16)
 

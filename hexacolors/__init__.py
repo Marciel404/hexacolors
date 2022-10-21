@@ -8,6 +8,8 @@ A simple library that converts RGB to hexadecimal understandable by python
 
 A simple library that converts CMYK to hexadecimal understandable by python
 
+A simple library that converts CMYK to hexadecimal understandable by python
+
 A simple library that converts hexadecimal understandable by python
 
 :(c) 2022-present Marciel404
@@ -19,7 +21,7 @@ Using StringColor:
 
     >>> import hexacolors
     >>>
-    >>> hexacolors.stringcolor('Blue')
+    >>> hexacolors.string('Blue')
     >>>
     >>> print(hexacolors.listall) #List all colors availables
 
@@ -27,7 +29,7 @@ Using HexaColor:
 
     >>> import hexacolors
     >>>
-    >>> hexacolors.hexacolor('#0000FF') #Convert Hexadecimal Color for Python understand
+    >>> hexacolors.hexadecimal('#0000FF') #Convert Hexadecimal Color for Python understand
 
 Using rgb:
 
@@ -39,19 +41,27 @@ Using cmyk:
 
     >>> import hexacolors
     >>>
-    >>> hexacolors.rgb('423,522,4,244')
+    >>> hexacolors.cmyk('423,522,4,244')
+
+Using hsl:
+
+    >>> import hexacolors
+    >>>
+    >>> hexacolors.hsl('423,60%,70%')
 
 Using AutoDetect:
 
     >>> import hexacolors
     >>>
-    >>> hexacolors.autodetect('Blue') Identify string
+    >>> hexacolors.autodetect('Blue') #Identify string
     >>>
-    >>> hexacolors.autodetect('#fff000') Identify Hexadecimal
+    >>> hexacolors.autodetect('#fff000') #Identify Hexadecimal
     >>>
-    >>> hexacolors.autodetect('255,255,255') Identify RGB
+    >>> hexacolors.autodetect('255,255,255') #Identify RGB
     >>>
-    >>> hexacolors.autodetect('423,522,4,244') Identify CMYK
+    >>> hexacolors.autodetect('423,522,4,244') #Identify CMYK
+    >>>
+    >>> hexacolors.autodetect('255,75%,64%') #Identify HSL
 
 """
 
@@ -59,12 +69,12 @@ __title__ = "Hexacolors"
 __author__ = "Marciel404"
 __license__ = "MIT"
 __copyright__ = "2022-present Marciel404"
-__version__ = "0.3.8"
+__version__ = "0.4.3"
 
 __path__ = __import__("pkgutil").extend_path(__path__, __name__)
 
-from .str import stringcolor
-from .api import hexacolor, rgb, cmyk
+from .str import string
+from .api import hexadecimal, rgb, cmyk, hsl
 from .autodetect import autodetect
 
 from .listcolors import (

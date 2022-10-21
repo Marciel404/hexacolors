@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="hexacolors",
-    version="0.3.8",
+    version="0.4.3",
     url = 'https://github.com/Marciel404/hexacolors',
     author="Marciel404",
     description='''
@@ -15,6 +15,8 @@ A simple library that converts string to hexadecimal understandable by python
 A simple library that converts RGB to hexadecimal understandable by python
 
 A simple library that converts CMYK to hexadecimal understandable by python
+
+A simple library that converts HSL to hexadecimal understandable by python
 
 A simple library that converts hexadecimal understandable by python
 ''',

@@ -1,13 +1,13 @@
 import string
 
-from .api import hexacolor, hsl, rgb, cmyk
+from .api import hexadecimal, hsl, rgb, cmyk
 from .str import stringcolor
 
 def autodetect(args:str) -> str:
 
     if args[0] == '#':
 
-        hexacolor(args)
+        hexadecimal(args)
 
     elif args.count('%') == 2:
 
@@ -23,7 +23,7 @@ def autodetect(args:str) -> str:
 
     elif args[0] in list(string.digits):
 
-        hexacolor(args)
+        hexadecimal(args)
     
     elif args[0] in list(string.ascii_letters):
 
@@ -33,7 +33,7 @@ def autodetect(args:str) -> str:
 
         except:
 
-            hexacolor(args)
+            hexadecimal(args)
 
     else:
 

@@ -10,7 +10,7 @@ from .colors.orange import *
 from .colors.yellow import *
 from .colors.ligthcolors import *
 
-def stringcolor(cor:str) -> str:
+def string(cor:str) -> str:
 
     if cor.lower().replace(' ','') == 'black': 
 

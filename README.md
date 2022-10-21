@@ -4,7 +4,9 @@ A simple library that converts string to hexadecimal understandable by python
 
 A simple library that converts RGB to hexadecimal understandable by python
 
-A simple library that converts CMYK to hexadecimal understandable by pytho
+A simple library that converts CMYK to hexadecimal understandable by python
+
+A simple library that converts HSL to hexadecimal understandable by python
 
 A simple library that converts hexadecimal understandable by python
 
@@ -22,7 +24,7 @@ pip install hexacolors
 ```python
 import hexacolors
 #or
-from hexacolors import hexacolor, stringcolor, cmyk, rgb, autodetect
+from hexacolors import hexacolor, stringcolor, cmyk, rgb, hsl, autodetect
 ```
 ### Run it
 ```python
@@ -31,7 +33,7 @@ Using StringColor:
 
     >>> import hexacolors
     >>>
-    >>> hexacolors.stringcolor('Blue')
+    >>> hexacolors.string('Blue')
     >>>
     >>> print(hexacolors.listall) #List all colors availables
 
@@ -39,7 +41,7 @@ Using HexaColor:
 
     >>> import hexacolors
     >>>
-    >>> hexacolors.hexacolor('#0000FF') #Convert Hexadecimal Color for Python understand
+    >>> hexacolors.hexadecimal('#0000FF') #Convert Hexadecimal Color for Python understand
 
 Using rgb:
 
@@ -53,17 +55,25 @@ Using cmyk:
     >>>
     >>> hexacolors.cmyk('423,522,4,244')
 
+Using hsl:
+
+    >>> import hexacolors
+    >>>
+    >>> hexacolors.hsl('423,60%,70%')
+
 Using AutoDetect:
 
     >>> import hexacolors
     >>>
-    >>> hexacolors.autodetect('Blue') Identify string
+    >>> hexacolors.autodetect('Blue') #Identify string
     >>>
-    >>> hexacolors.autodetect('#fff000') Identify Hexadecimal
+    >>> hexacolors.autodetect('#fff000') #Identify Hexadecimal
     >>>
-    >>> hexacolors.autodetect('255,255,255') Identify RGB
+    >>> hexacolors.autodetect('255,255,255') #Identify RGB
     >>>
-    >>> hexacolors.autodetect('423,522,4,244') Identify CMYK
+    >>> hexacolors.autodetect('423,522,4,244') #Identify CMYK
+    >>>
+    >>> hexacolors.autodetect('255,75%,64%') #Identify HSL
 '''
 ```
 
@@ -106,7 +116,7 @@ async def ping(ctx):
     e = discord.Embed(
     title ='Ping',
     description = 'My ping is {}'.format(int(ping)),
-    color = hexacolors.hexacolor('#2f005c')
+    color = hexacolors.hexadecimal('#2f005c')
     )
 
     await ctx.send(embed = e)
@@ -121,7 +131,7 @@ async def ping(ctx):
     e = discord.Embed(
     title ='Ping',
     description = 'My ping is {}'.format(int(ping)),
-    color = hexacolors.stringcolor('Blue')
+    color = hexacolors.string('Blue')
     )
 
     await ctx.send(embed = e)
