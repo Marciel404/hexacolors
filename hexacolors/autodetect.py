@@ -1,9 +1,25 @@
 import string
 
 from .api import hexadecimal, hsl, rgb, cmyk
-from .str import stringcolor
+from .str import string as stringcolor
 
 def autodetect(args:str) -> str:
+
+    '''
+    Using AutoDetect:
+
+    >>> import hexacolors
+    >>>
+    >>> hexacolors.autodetect('Blue') #Identify string
+    >>>
+    >>> hexacolors.autodetect('#fff000') #Identify Hexadecimal
+    >>>
+    >>> hexacolors.autodetect('255,255,255') #Identify RGB
+    >>>
+    >>> hexacolors.autodetect('423,522,4,244') #Identify CMYK
+    >>>
+    >>> hexacolors.autodetect('255,75%,64%') #Identify HSL
+    '''
 
     if args[0] == '#':
 

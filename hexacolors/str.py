@@ -12,6 +12,16 @@ from .colors.ligthcolors import *
 
 def string(cor:str) -> str:
 
+    '''
+    Using StringColor:
+
+    >>> import hexacolors
+    >>>
+    >>> hexacolors.string('Blue')
+    >>>
+    >>> print(hexacolors.listall) #List all colors availables
+    '''
+
     if cor.lower().replace(' ','') == 'black': 
 
         color = black()
