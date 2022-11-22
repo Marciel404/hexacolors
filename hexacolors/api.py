@@ -13,30 +13,42 @@ def hexadecimal(hexa:str) -> str:
     if hexa[0] == '#':
 
         hexa = hexa[1::]
+    
+    try: #Use if online
 
-    p = requests.get(f'https://www.thecolorapi.com/id?hex={hexa}')
+        p = requests.get(f'https://www.thecolorapi.com/id?hex={hexa}')
 
-    colour = int(f"0x{p.json()['hex']['clean']}",16)
+        colour = int(f"0x{p.json()['hex']['clean']}",16)
+    
+    except: #USe if offline
+
+        colour = int(f"0x{hexa}",16)
 
     return colour
 
-def rgb(rgb:str) -> str:
+def rgb(r:int,g:int,b:int) -> int:
 
     '''
     Using rgb:
 
     >>> import hexacolors
     >>>
-    >>> hexacolors.rgb('255,255,255')
+    >>> hexacolors.rgb(255,255,255)
     '''
 
-    p = requests.get(f'https://www.thecolorapi.com/id?rgb={rgb}')
+    try: #Use if online
 
-    colour = int(f"0x{p.json()['hex']['clean']}",16)
+        p = requests.get(f'https://www.thecolorapi.com/id?rgb={r},{g},{b}')
+
+        colour = int(f"0x{p.json()['hex']['clean']}",16)
+    
+    except: #USe if offline
+
+        colour = int('0x{:X}{:X}{:X}'.format(r, g, b),16)
 
     return colour
 
-def cmyk(cmyk:str) -> str:
+def cmyk(c:int,m:int,y:int,k:int) -> str:
 
     '''
     Using cmyk:
@@ -46,9 +58,15 @@ def cmyk(cmyk:str) -> str:
     >>> hexacolors.cmyk('423,522,4,244')
     '''
 
-    p = requests.get(f'https://www.thecolorapi.com/id?cmyk={cmyk}')
+    try:
 
-    colour = int(f"0x{p.json()['hex']['clean']}",16)
+        p = requests.get(f'https://www.thecolorapi.com/id?cmyk={c},{m},{y},{k}')
+
+        colour = int(f"0x{p.json()['hex']['clean']}",16)
+    
+    except: #USe if offline
+
+        colour = int('0x{:X}{:X}{:X}{:X}'.format(c, m, y, k),16)
 
     return colour
 
