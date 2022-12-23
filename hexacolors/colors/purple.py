@@ -1,77 +1,13 @@
-def mediumslateBllue():
-
-    cor = 0x7B68EE
-
-    return cor
-
-def mediumpurple():
-
-    cor = 0x9370DB
-
-    return cor
-
-def blueviolet():
-
-    cor = 0x8A2BE2
-
-    return cor
-
-def indigo():
-
-    cor = 0x4B0082
-
-    return cor
-
-def darkviolet():
-
-    cor = 0x9400D3
-
-    return cor
-
-def darkorchid():
-
-    cor = 0x9932CC
-
-    return cor
-
-def mediumorchid():
-
-    cor = 0xBA55D3
-
-    return cor
-
-def purple():
-
-    cor = 0xA020F0
-
-    return cor
-
-def darkmagenta():
-
-    cor = 0x8B008B
-
-    return cor
-
-def magenta():
-
-    cor = 0xFF00FF
-
-    return cor
-
-def violet():
-
-    cor = 0xEE82EE
-
-    return cor
-
-def orchid():
-
-    cor = 0xDA70D6
-
-    return cor
-
-def plum():
-
-    cor = 0xDDA0DD
-
-    return cor
+def mediumslateBllue():return 0x7B68EE
+def mediumpurple():return 0x9370DB
+def blueviolet():return 0x8A2BE2
+def indigo():return 0x4B0082
+def darkviolet():return 0x9400D3
+def darkorchid():return 0x9932CC
+def mediumorchid():return 0xBA55D3
+def purple():return 0xA020F0
+def darkmagenta():return 0x8B008B
+def magenta():return 0xFF00FF
+def violet():return 0xEE82EE
+def orchid():return 0xDA70D6
+def plum():return 0xDDA0DD
