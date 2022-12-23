@@ -32,7 +32,7 @@ Run if online:
     Using StringColor:
 
         >>> import hexacolors
-        >>> hexacolors.string('Blue')
+        >>> hexacolors.stringColor('Blue')
         >>> print(hexacolors.listall) #List all colors availables
         
     Using HexaColor:
@@ -67,11 +67,11 @@ Run if online:
 
 Run if offline:
 
-    sing StringColor:
+    Using StringColor:
 
         >>> import hexacolors
         >>>
-        >>> hexacolors.string('Blue')
+        >>> hexacolors.stringColor('Blue')
         >>>
         >>> print(hexacolors.listall) #List all colors availables
         
