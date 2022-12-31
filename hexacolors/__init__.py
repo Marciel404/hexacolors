@@ -17,12 +17,12 @@ __title__ = "Hexacolors"
 __author__ = "Marciel404"
 __license__ = "MIT"
 __copyright__ = "2022-present Marciel404"
-__version__ = "0.5.0"
+__version__ = "0.5.3"
 
-from .offline.str import StringColor
+from .offline.str import stringColor
 from .offline.converoff import hexadecimaloff, rgboff, cmykoff
 from .online.autodetect import autodetect
-from .online.api import hexadecimal, rgb,cmyk,hsl
+from .online.api import hexadecimal, rgb, cmyk, hsl
 
 from .colors._listcolors_ import (
     listblack,

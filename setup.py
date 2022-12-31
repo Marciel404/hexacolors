@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="hexacolors",
-    version="0.5.0",
+    version="0.5.3",
     url = 'https://github.com/Marciel404/hexacolors',
     author="Marciel404",
     description='''
@@ -27,7 +27,7 @@ setup(
     'License :: MIT License',
     'Programming Language :: Python',
     ],
-    python_requires='>=3.8',
+    python_requires='>=3.10',
     install_requires=['requests>=2.28.1'],
     dependency_links=['https://github.com/Marciel404/hexacolors']
 )
