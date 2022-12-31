@@ -67,7 +67,7 @@ Run if online:
 
 Run if offline:
 
-    Using StringColor:
+    sing StringColor:
 
         >>> import hexacolors
         >>>
