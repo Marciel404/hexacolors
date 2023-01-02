@@ -1,57 +1,56 @@
-import requests
+import asyncio
+from .client.clientlogin import ClientGet
 
-def hexadecimal(hexa: str) -> int:
+def hexadecimal(hexa:str) -> int:
 
-    """
+    '''
     Using HexaColor:
 
     >>> import hexacolors
     >>> hexacolors.hexadecimal('#0000FF') #Convert Hexadecimal Color for Python understand
-    """
+    '''
 
-    if hexa[0] == '#':
-        hexa = hexa[1::]
+    if hexa[0] == '#':hexa = hexa[1::]
     
-    p = requests.get(f'https://www.thecolorapi.com/id?hex={hexa}')
+    request = asyncio.run(ClientGet(f'hex', hexa).request())
 
-    return int(f"0x{p.json()['hex']['clean']}",  16)
+    return int(f"0x{request}",16)
 
+def rgb(rgb) -> int:
 
-def rgb(rgb: str) -> int:
-
-    """
+    '''
     Using rgb:
 
     >>> import hexacolors
     >>> hexacolors.rgb('255,255,255')
-    """
+    '''
     
-    p = requests.get(f'https://www.thecolorapi.com/id?rgb={rgb}')
+    request = asyncio.run(ClientGet(f'rgb', rgb).request())
     
-    return int(f"0x{p.json()['hex']['clean']}", 16)
+    return int(f"0x{request}",16)
 
-def cmyk(cmyk: str) -> int:
+def cmyk(cmyk) -> int:
 
-    """
+    '''
     Using cmyk:
 
     >>> import hexacolors
     >>> hexacolors.cmyk('423,522,4,244')
-    """
+    '''
 
-    p = requests.get(f'https://www.thecolorapi.com/id?cmyk={cmyk}')
+    request = asyncio.run(ClientGet(f'cmyk', cmyk).request())
 
-    return int(f"0x{p.json()['hex']['clean']}", 16)
+    return int(f"0x{request}",16)
 
-def hsl(hsl: str) -> int:
+def hsl(hsl:str) -> int:
 
-    """
+    '''
     Using hsl:
 
     >>> import hexacolors
     >>> hexacolors.hsl('423,60%,70%')
-    """
+    '''
 
-    p = requests.get(f'https://www.thecolorapi.com/id?hsl={hsl}')
+    request = asyncio.run(ClientGet(f'hsl', hsl).request())
 
-    return int(f"0x{p.json()['hex']['clean']}", 16)
+    return int(f"0x{request}",16)

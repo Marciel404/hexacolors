@@ -32,4 +32,4 @@ def cmykoff(c: int, m: int, y: int, k: int) -> int:
     >>> hexacolors.cmykoff('423,522,4,244')
     """
 
-    return int('0x{:X}{:X}{:X}{:X}'.format(c, m, y, k), 16)
+    return int('0x{:X}{:X}{:X}'.format(c+255, m+255, y+255), 16)
