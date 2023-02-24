@@ -1,5 +1,4 @@
-import asyncio
-from .client.clientlogin import ClientGet
+from .client.clientlogin import ClientAPI
 
 def hexadecimal(hexa:str) -> int:
 
@@ -12,7 +11,7 @@ def hexadecimal(hexa:str) -> int:
 
     if hexa[0] == '#':hexa = hexa[1::]
     
-    request = asyncio.run(ClientGet(f'hex', hexa).request())
+    request = ClientAPI(f'hex', hexa).get()
 
     return int(f"0x{request}",16)
 
@@ -25,7 +24,7 @@ def rgb(rgb) -> int:
     >>> hexacolors.rgb('255,255,255')
     '''
     
-    request = asyncio.run(ClientGet(f'rgb', rgb).request())
+    request = ClientAPI(f'rgb', rgb).get()
     
     return int(f"0x{request}",16)
 
@@ -38,7 +37,7 @@ def cmyk(cmyk) -> int:
     >>> hexacolors.cmyk('423,522,4,244')
     '''
 
-    request = asyncio.run(ClientGet(f'cmyk', cmyk).request())
+    request = ClientAPI(f'cmyk', cmyk).get()
 
     return int(f"0x{request}",16)
 
@@ -51,6 +50,6 @@ def hsl(hsl:str) -> int:
     >>> hexacolors.hsl('423,60%,70%')
     '''
 
-    request = asyncio.run(ClientGet(f'hsl', hsl).request())
+    request = ClientAPI(f'hsl', hsl).get()
 
     return int(f"0x{request}",16)

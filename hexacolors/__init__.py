@@ -1,5 +1,14 @@
+# :::    ::: :::::::::: :::    :::     :::      ::::::::   ::::::::  :::         ::::::::  :::::::::   ::::::::  
+# :+:    :+: :+:        :+:    :+:   :+: :+:   :+:    :+: :+:    :+: :+:        :+:    :+: :+:    :+: :+:    :+: 
+# +:+    +:+ +:+         +:+  +:+   +:+   +:+  +:+        +:+    +:+ +:+        +:+    +:+ +:+    +:+ +:+        
+# +#++:++#++ +#++:++#     +#++:+   +#++:++#++: +#+        +#+    +:+ +#+        +#+    +:+ +#++:++#:  +#++:++#++ 
+# +#+    +#+ +#+         +#+  +#+  +#+     +#+ +#+        +#+    +#+ +#+        +#+    +#+ +#+    +#+        +#+ 
+# #+#    #+# #+#        #+#    #+# #+#     #+# #+#    #+# #+#    #+# #+#        #+#    #+# #+#    #+# #+#    #+# 
+# ###    ### ########## ###    ### ###     ###  ########   ########  ##########  ########  ###    ###  ########  
+
 """
 Hexacolors
+~~~~~~~~~~
 ~~~~~~~~~~
 
 :A simple library that converts string to hexadecimal understandable by python
@@ -17,14 +26,14 @@ __title__ = "Hexacolors"
 __author__ = "Marciel404"
 __license__ = "MIT"
 __copyright__ = "2022-present Marciel404"
-__version__ = "0.5.3"
+__version__ = "0.6.0b6"
 
 from .offline.str import stringColor
 from .offline.converoff import hexadecimaloff, rgboff, cmykoff
 from .online.autodetect import autodetect
 from .online.api import hexadecimal, rgb, cmyk, hsl
 
-from .colors._listcolors_ import (
+from .colors.__listcolors__ import (
     listblack,
     listblue,
     listcyan,

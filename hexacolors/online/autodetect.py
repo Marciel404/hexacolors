@@ -18,7 +18,7 @@ def autodetect(args:str):
     """
 
     if args[0] == '#':hexadecimal(args)
-    elif args.count('%') > 0:hsl(args)
+    elif args.count('%') > 0: hsl(args)
     elif args.count(',') == 2:rgb(args)
     elif args.count(',') == 3:cmyk(args)
     elif args[0] in list(string.digits):hexadecimal(args)

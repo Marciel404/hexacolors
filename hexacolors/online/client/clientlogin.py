@@ -1,17 +1,17 @@
-import aiohttp
+import requests, http
+import http.client
 
-class ClientGet:
+class ClientAPI:
 
-    def __init__(self, type: str, value: str) -> None:
+    def __init__(
+            self,
+            type: str,
+            value: str,
+        ) -> int:
 
         self.url = 'https://www.thecolorapi.com/id?{}={}'.format(type, value)
     
-    async def request(self):
+    def get(self):
 
-        async with aiohttp.ClientSession() as request:
-
-            async with request.get(self.url) as response:
-
-                res = await response.json()
-                return res['hex']['clean']
-                    
+        res = requests.get(self.url).json()
+        return res['hex']['clean']
